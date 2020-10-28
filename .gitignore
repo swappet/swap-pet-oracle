@@ -106,4 +106,8 @@ dist
 # truffle 
 .mnemonic
 .infuraKey
-.etherscan
+.etherscan  
+
+#Hardhat files
+cache
+artifacts
