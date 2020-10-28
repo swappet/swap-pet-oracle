@@ -1,0 +1,33 @@
+{
+  "name": "swap-pet-price-oracle",
+  "version": "1.0.0",
+  "description": "Swap.Pet Price Oracle",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swappet/swap.pet-oracle.git"
+  },
+  "keywords": [
+    "Swap.Pet",
+    "SPTE",
+    "SPTC",
+    "SPTF",
+    "SPTD",
+    "pUSD",
+    "Oracle"
+  ],
+  "author": "swap.pet@pm.me",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/swappet/swap.pet-oracle/issues"
+  },
+  "homepage": "https://github.com/swappet/swap.pet-oracle#readme"
+}
