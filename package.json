@@ -38,7 +38,7 @@
     "url": "https://github.com/swappet/swap.pet-oracle/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org"
   },
   "homepage": "https://github.com/swappet/swap.pet-oracle#readme"
 }
