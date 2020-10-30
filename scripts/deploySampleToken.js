@@ -1,4 +1,11 @@
-// const { ethers } = require("hardhat");
+// We require the Hardhat Runtime Environment explicitly here. This is optional 
+// but useful for running the script in a standalone fashion through `node <script>`.
+//
+// When running the script with `hardhat run <script>` you'll find the Hardhat
+// Runtime Environment's members available in the global scope.
+const hre = require("hardhat");
+const ethers = hre.ethers;
+
 // This is a script for deploying your contracts. You can adapt it to deploy
 // yours, or create new ones.
 async function main() {
