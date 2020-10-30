@@ -1,3 +1,4 @@
+const { ethers } = require("hardhat");
 // This is a script for deploying your contracts. You can adapt it to deploy
 // yours, or create new ones.
 async function main() {
