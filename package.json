@@ -6,6 +6,7 @@
   "directories": {
     "build": "npx npm run compile && npx buidler typechain",
     "compile": "npx buidler compile",
+    "coverage": "npx truffle run coverage",
     "test": "npx buidler test"
   },
   "dependencies": {},
