@@ -126,6 +126,7 @@ module.exports = {
     // timeout: 100000
     reporter: 'eth-gas-reporter',
   },
+  plugins: ["solidity-coverage"],
 
   // Configure your compilers
   compilers: {
