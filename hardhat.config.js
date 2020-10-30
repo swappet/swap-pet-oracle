@@ -21,7 +21,7 @@ module.exports = {
       gasPrice:8000000000,        // default:auto
       gasMultiplier:1,            // default:1
       HardhatNetworkHDAccountsConfig:{
-        mnemonic:"test test test test test test test test test test test junk",
+        mnemonic:"test test test test test test test test test test test junkd",
         // mnemonic:`${mnemonic}`,
         initialIndex:0,
         path:"m/44'/60'/0'/0",
