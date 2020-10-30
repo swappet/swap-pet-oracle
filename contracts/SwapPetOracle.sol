@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2020 Swap.Pet@pm.me
-// contracts/interfaces/SwapPetOracle.sol
+// contracts/SwapPetOracle.sol
 pragma solidity ^0.7.0; 
 
 // import "@nomiclabs/buidler/console.sol";
