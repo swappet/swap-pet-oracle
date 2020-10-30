@@ -18,7 +18,7 @@ async function main() {
   //   await deployer.getAddress()
   // );
 
-  console.log("Account balance:", (await deployer.getBalance()).toString());
+  // console.log("Account balance:", (await deployer.getBalance()).toString());
 
   // const SampleToken = await ethers.getContractFactory("SampleToken");
   const SampleToken = await ethers.getContract("SampleToken");
