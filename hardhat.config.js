@@ -20,7 +20,7 @@ module.exports = {
       gas:9500000,                // default:auto
       gasPrice:8000000000,        // default:auto
       gasMultiplier:1,            // default:1
-      accounts:{
+      HardhatNetworkHDAccountsConfig:{
         mnemonic:"test test test test test test test test test test test junk",
         // mnemonic:`${mnemonic}`,
         initialIndex:0,
@@ -48,12 +48,7 @@ module.exports = {
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${infuraKey}`,
       chainId:4,
-      accounts: {
-        mnemonic:`${mnemonic}`,
-        initialIndex:0,
-        path:"m/44'/60'/0'/0",
-        count:20,
-      },
+      // accounts: [{privateKey: string, balance: string}],
       timeout:20000,
     },
   },

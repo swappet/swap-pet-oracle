@@ -2,5 +2,6 @@
 Price Oracle of Swap.Pet, support SwapPet/Uniswap/SushiSwap/ChainLink ...
 
 
-# test
-`npx hardhat test`
+# command
+compile:`npx hardhat compile`
+test:`npx hardhat test`
