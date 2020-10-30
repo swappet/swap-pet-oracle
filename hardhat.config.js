@@ -14,7 +14,7 @@ const mnemonic = fs.readFileSync(path.resolve(__dirname, '.secret')).toString().
 // The next line is part of the sample project, you don't need it in your
 // project. It imports a Hardhat task definition, that can be used for
 // testing the frontend.
-// require("./tasks/faucet");
+require("./tasks/faucet");
 task("accounts", "Prints all accounts")
   .setAction(async () => {
     let accounts = await web3.eth.getAccounts();
