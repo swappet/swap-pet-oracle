@@ -3,7 +3,7 @@
 //
 // When running the script with `buidler run <script>` you'll find the Buidler
 // Runtime Environment's members available in the global scope. 
-// import { ethers } from "@nomiclabs/buidler";
+import { ethers } from "@nomiclabs/buidler";
 
 async function main() {
   // Buidler always runs the compile task when running scripts with its command
