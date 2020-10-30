@@ -23,7 +23,8 @@
     "compile": "npx hardhat compile",
     "coverage": "npx truffle run coverage",
     "gas": "npx truffle test",
-    "test": "npx hardhat test"
+    "test": "npx hardhat test",
+    "clean": "npx hardhat clean"
   },
   "repository": {
     "type": "git",
