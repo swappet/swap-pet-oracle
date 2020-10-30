@@ -1,0 +1,733 @@
+{
+  "contractName": "ISwapPetOracle",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "base_",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "quote_",
+          "type": "address"
+        }
+      ],
+      "name": "price",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenIn_",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "tokenOut_",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountIn_",
+          "type": "uint256"
+        }
+      ],
+      "name": "swap",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountOut_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"base_\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quote_\",\"type\":\"address\"}],\"name\":\"price\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenIn_\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tokenOut_\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountIn_\",\"type\":\"uint256\"}],\"name\":\"swap\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amountOut_\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Swap.Pet@pm.me \",\"details\":\"price on base/quote, swaper for exchange between base and quote. \",\"kind\":\"dev\",\"methods\":{},\"title\":\"Interface for interacting with price Oracle of Swap.Pet.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"price(address,address)\":{\"notice\":\"the price(scaled by 1e18) of base_/quote_.\"},\"swap(address,address,uint256)\":{\"notice\":\"swap Check amountIn_ tokenIn_ to amountOut_ tokenOut_.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/media/sdc1/GitClient/swappet/oracle/contracts/interfaces/ISwapPetOracle.sol\":\"ISwapPetOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[]},\"sources\":{\"/media/sdc1/GitClient/swappet/oracle/contracts/interfaces/ISwapPetOracle.sol\":{\"keccak256\":\"0x31649680d44fb888d2b82f23c584839cac2c72d52fb702a44ca5997f4297969e\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://da93f1985c36053076b3c6afc7de905d750d261d1217cc257db98aba47f92f28\",\"dweb:/ipfs/QmWo7svGt9RAm5WzmjgFY1aH8aJwdF7R9TxPRVKucnsDmA\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: Apache-2.0\n// Copyright 2020 Swap.Pet@pm.me\n// contracts/interfaces/ISwapPetOracle.sol\npragma solidity ^0.7.0;\n\n/// @title   Interface for interacting with price Oracle of Swap.Pet.\n/// @author  Swap.Pet@pm.me \n/// @dev     price on base/quote, swaper for exchange between base and quote. \ninterface ISwapPetOracle { \n    /// @notice the price(scaled by 1e18) of base_/quote_.\n    // / @returns return 0 if false or not support the base_/quote_. \n    function price(address base_,address quote_) external view returns (uint256);\n\n    /// @notice swap Check amountIn_ tokenIn_ to amountOut_ tokenOut_.\n    // / @returns 0 with do nothing or do not support base_/quote_ swap.\n    function swap(address tokenIn_,address tokenOut_,uint256 amountIn_) external returns (uint256 amountOut_);\n}",
+  "sourcePath": "/media/sdc1/GitClient/swappet/oracle/contracts/interfaces/ISwapPetOracle.sol",
+  "ast": {
+    "absolutePath": "/media/sdc1/GitClient/swappet/oracle/contracts/interfaces/ISwapPetOracle.sol",
+    "exportedSymbols": {
+      "ISwapPetOracle": [
+        158
+      ]
+    },
+    "id": 159,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 134,
+        "literals": [
+          "solidity",
+          "^",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "115:23:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 135,
+          "nodeType": "StructuredDocumentation",
+          "src": "140:178:2",
+          "text": "@title   Interface for interacting with price Oracle of Swap.Pet.\n @author  Swap.Pet@pm.me \n @dev     price on base/quote, swaper for exchange between base and quote. "
+        },
+        "fullyImplemented": false,
+        "id": 158,
+        "linearizedBaseContracts": [
+          158
+        ],
+        "name": "ISwapPetOracle",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 136,
+              "nodeType": "StructuredDocumentation",
+              "src": "350:54:2",
+              "text": "@notice the price(scaled by 1e18) of base_/quote_."
+            },
+            "functionSelector": "2b00490d",
+            "id": 145,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "price",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 141,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 138,
+                  "mutability": "mutable",
+                  "name": "base_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 145,
+                  "src": "494:13:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 137,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "494:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 140,
+                  "mutability": "mutable",
+                  "name": "quote_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 145,
+                  "src": "508:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 139,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "508:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "493:30:2"
+            },
+            "returnParameters": {
+              "id": 144,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 143,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 145,
+                  "src": "547:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 142,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:9:2"
+            },
+            "scope": 158,
+            "src": "479:77:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 146,
+              "nodeType": "StructuredDocumentation",
+              "src": "562:66:2",
+              "text": "@notice swap Check amountIn_ tokenIn_ to amountOut_ tokenOut_."
+            },
+            "functionSelector": "df791e50",
+            "id": 157,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swap",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 153,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 148,
+                  "mutability": "mutable",
+                  "name": "tokenIn_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 157,
+                  "src": "720:16:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 147,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "720:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 150,
+                  "mutability": "mutable",
+                  "name": "tokenOut_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 157,
+                  "src": "737:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 149,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "737:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 152,
+                  "mutability": "mutable",
+                  "name": "amountIn_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 157,
+                  "src": "755:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 151,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "755:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "719:54:2"
+            },
+            "returnParameters": {
+              "id": 156,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 155,
+                  "mutability": "mutable",
+                  "name": "amountOut_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 157,
+                  "src": "792:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 154,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "792:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "791:20:2"
+            },
+            "scope": 158,
+            "src": "706:106:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 159,
+        "src": "318:496:2"
+      }
+    ],
+    "src": "115:699:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/media/sdc1/GitClient/swappet/oracle/contracts/interfaces/ISwapPetOracle.sol",
+    "exportedSymbols": {
+      "ISwapPetOracle": [
+        158
+      ]
+    },
+    "id": 159,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 134,
+        "literals": [
+          "solidity",
+          "^",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "115:23:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 135,
+          "nodeType": "StructuredDocumentation",
+          "src": "140:178:2",
+          "text": "@title   Interface for interacting with price Oracle of Swap.Pet.\n @author  Swap.Pet@pm.me \n @dev     price on base/quote, swaper for exchange between base and quote. "
+        },
+        "fullyImplemented": false,
+        "id": 158,
+        "linearizedBaseContracts": [
+          158
+        ],
+        "name": "ISwapPetOracle",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 136,
+              "nodeType": "StructuredDocumentation",
+              "src": "350:54:2",
+              "text": "@notice the price(scaled by 1e18) of base_/quote_."
+            },
+            "functionSelector": "2b00490d",
+            "id": 145,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "price",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 141,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 138,
+                  "mutability": "mutable",
+                  "name": "base_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 145,
+                  "src": "494:13:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 137,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "494:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 140,
+                  "mutability": "mutable",
+                  "name": "quote_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 145,
+                  "src": "508:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 139,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "508:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "493:30:2"
+            },
+            "returnParameters": {
+              "id": 144,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 143,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 145,
+                  "src": "547:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 142,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:9:2"
+            },
+            "scope": 158,
+            "src": "479:77:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 146,
+              "nodeType": "StructuredDocumentation",
+              "src": "562:66:2",
+              "text": "@notice swap Check amountIn_ tokenIn_ to amountOut_ tokenOut_."
+            },
+            "functionSelector": "df791e50",
+            "id": 157,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swap",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 153,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 148,
+                  "mutability": "mutable",
+                  "name": "tokenIn_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 157,
+                  "src": "720:16:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 147,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "720:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 150,
+                  "mutability": "mutable",
+                  "name": "tokenOut_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 157,
+                  "src": "737:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 149,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "737:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 152,
+                  "mutability": "mutable",
+                  "name": "amountIn_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 157,
+                  "src": "755:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 151,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "755:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "719:54:2"
+            },
+            "returnParameters": {
+              "id": 156,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 155,
+                  "mutability": "mutable",
+                  "name": "amountOut_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 157,
+                  "src": "792:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 154,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "792:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "791:20:2"
+            },
+            "scope": 158,
+            "src": "706:106:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 159,
+        "src": "318:496:2"
+      }
+    ],
+    "src": "115:699:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.0+commit.9e61f92b.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-30T05:38:32.415Z",
+  "devdoc": {
+    "author": "Swap.Pet@pm.me ",
+    "details": "price on base/quote, swaper for exchange between base and quote. ",
+    "kind": "dev",
+    "methods": {},
+    "title": "Interface for interacting with price Oracle of Swap.Pet.",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "price(address,address)": {
+        "notice": "the price(scaled by 1e18) of base_/quote_."
+      },
+      "swap(address,address,uint256)": {
+        "notice": "swap Check amountIn_ tokenIn_ to amountOut_ tokenOut_."
+      }
+    },
+    "version": 1
+  }
+}
