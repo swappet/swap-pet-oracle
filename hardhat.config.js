@@ -21,7 +21,7 @@ module.exports = {
     },
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${infuraKey}`,
-      accounts: [privateKey1, privateKey2, ...]
+      accounts: [privateKey1, privateKey2]
     },
   },
   solc: {
