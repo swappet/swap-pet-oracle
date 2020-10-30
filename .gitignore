@@ -107,6 +107,7 @@ dist
 .mnemonic
 .infuraKey
 .etherscan  
+.secret
 
 #Hardhat files
 cache
