@@ -22,12 +22,12 @@
     "web3": "^1.3.0"
   },
   "scripts": {
-    "build": "npx npm run compile && npx buidler typechain",
+    "build": "npx npm run compile",
     "tcompile": "npx truffle compile",
     "compile": "npx hardhat compile",
-    "tcoverage": "npx truffle run coverage",
-    "bcoverage": "npx buidler coverage --network coverage",
-    "test": "npx buidler test"
+    "coverage": "npx truffle run coverage", 
+    "gas": "npx truffle test",
+    "test": "npx hardhat test"
   },
   "repository": {
     "type": "git",
