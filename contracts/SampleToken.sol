@@ -9,10 +9,10 @@ import "hardhat/console.sol";
 
 
 // This is the main building block for smart contracts.
-contract Token {
+contract SampleToken {
     // Some string type variables to identify the token.
-    string public name = "My Hardhat Token";
-    string public symbol = "MHT";
+    string public name = "My SampleToken";
+    string public symbol = "MST";
 
     // The fixed amount of tokens stored in an unsigned integer type variable.
     uint256 public totalSupply = 1000000;
