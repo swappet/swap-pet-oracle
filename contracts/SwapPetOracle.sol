@@ -3,7 +3,7 @@
 // contracts/interfaces/SwapPetOracle.sol
 pragma solidity ^0.7.0; 
 
-import "hardhat/console.sol";
+import "@nomiclabs/buidler/console.sol";
 
 /// @title   basic price Oracle of Swap.Pet.
 /// @author  Swap.Pet@pm.me 
