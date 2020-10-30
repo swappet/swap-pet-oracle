@@ -16,8 +16,11 @@ const mnemonic = fs.readFileSync(path.resolve(__dirname, '.secret')).toString().
 // testing the frontend.
 // require("./tasks/faucet");
 task("balance", "Prints an account's balance")
-  .setAction(async () => {});
-  
+  .setAction(async () => {
+    let accounts = await web3.eth.getAccounts();
+    console(accounts);
+  });
+
 // You have to export an object to set up your config
 // This object can have the following optional entries:
 // defaultNetwork, networks, solc, and paths.
