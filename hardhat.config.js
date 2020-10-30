@@ -4,8 +4,7 @@
 require('@nomiclabs/hardhat-truffle5'); 
 require("@nomiclabs/hardhat-web3");
 require('solidity-coverage'); 
-require('eth-gas-reporter'); 
-require('buidler-gas-reporter'); 
+require('eth-gas-reporter');  
 
 const fs = require('fs');
 const path = require('path'); 
