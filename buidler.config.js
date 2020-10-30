@@ -28,7 +28,7 @@ module.exports = {
         accountsBalance:10000
       },
       blockGasLimit:9500000,
-      hardfork:'muirGlacier', // byzantium/constantinople/petersburg/istanbul/muirGlacier
+      hardfork:'istanbul', // byzantium/constantinople/petersburg/istanbul/muirGlacier
       throwOnTransactionFailures:true,
       throwOnCallFailures:true,
       // initialDate:'2020-10-30T14:48:00',
