@@ -6,7 +6,7 @@
   "directories": {
     "build": "npx npm run compile && npx buidler typechain",
     "compile": "npx buidler compile",
-    "test": "npx buidler test" 
+    "test": "npx buidler test"
   },
   "dependencies": {},
   "devDependencies": {
