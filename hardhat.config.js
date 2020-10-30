@@ -15,12 +15,20 @@ const mnemonic = fs.readFileSync(path.resolve(__dirname, '.secret')).toString().
 // project. It imports a Hardhat task definition, that can be used for
 // testing the frontend.
 // require("./tasks/faucet");
-task("balance", "Prints an account's balance")
+task("accounts", "Prints all accounts")
   .setAction(async () => {
     let accounts = await web3.eth.getAccounts();
     console.log(accounts);
   });
 
+task("balance", "Prints an account's balance")
+  .addParam("account", "The account's address")
+  .setAction(async taskArgs => {
+    const account = web3.utils.toChecksumAddress(taskArgs.account);
+    const balance = await web3.eth.getBalance(account);
+
+    console.log(web3.utils.fromWei(balance, "ether"), "ETH");
+  });
 // You have to export an object to set up your config
 // This object can have the following optional entries:
 // defaultNetwork, networks, solc, and paths.
