@@ -8,10 +8,11 @@ const fs = require('fs');
 const path = require('path'); 
 const infuraKey = fs.readFileSync(path.resolve(__dirname, '.infuraKey')).toString().trim(); 
 const mnemonic = fs.readFileSync(path.resolve(__dirname, '.secret')).toString().trim()
+
 // You have to export an object to set up your config
 // This object can have the following optional entries:
 // defaultNetwork, networks, solc, and paths.
-// Go to https://buidler.dev/config/ to learn more 
+// Go to https://hardhat.org/config/ to learn more 
 module.exports = {
   defaultNetwork: 'hardhat',  
   networks: {
@@ -32,7 +33,7 @@ module.exports = {
       hardfork:'muirGlacier', // byzantium/constantinople/petersburg/istanbul/muirGlacier
       throwOnTransactionFailures:true,
       throwOnCallFailures:true,
-      initialDate:'2020-10-30T14:48:00',
+      // initialDate:'2020-10-30T14:48:00',
       allowUnlimitedContractSize:false,
       forking:{
         url:`https://rinkeby.infura.io/v3/${infuraKey}`,
