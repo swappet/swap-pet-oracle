@@ -26,7 +26,7 @@ module.exports = {
         initialIndex:0,
         path:"m/44'/60'/0'/0",
         count:20,
-        accountsBalance:10000 ETH
+        accountsBalance:10000
       },
       blockGasLimit:9500000,
       hardfork:'muirGlacier', // byzantium/constantinople/petersburg/istanbul/muirGlacier
