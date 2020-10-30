@@ -24,7 +24,7 @@
   "scripts": {
     "build": "npx npm run compile && npx buidler typechain",
     "tcompile": "npx truffle compile",
-    "bcompile": "npx buidler compile",
+    "compile": "npx hardhat compile",
     "tcoverage": "npx truffle run coverage",
     "bcoverage": "npx buidler coverage --network coverage",
     "test": "npx buidler test"
