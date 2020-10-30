@@ -1,11 +1,10 @@
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */ 
-require('@nomiclabs/hardhat-truffle5');
-
-// in porting
+require('@nomiclabs/hardhat-truffle5'); 
+require("@nomiclabs/hardhat-web3");
 require('solidity-coverage'); 
-require('buidler-gas-reporter'); 
+require('eth-gas-reporter'); 
 
 const fs = require('fs');
 const path = require('path'); 
@@ -16,7 +15,9 @@ const mnemonic = fs.readFileSync(path.resolve(__dirname, '.secret')).toString().
 // project. It imports a Hardhat task definition, that can be used for
 // testing the frontend.
 // require("./tasks/faucet");
-
+task("balance", "Prints an account's balance")
+  .setAction(async () => {});
+  
 // You have to export an object to set up your config
 // This object can have the following optional entries:
 // defaultNetwork, networks, solc, and paths.
