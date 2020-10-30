@@ -18,7 +18,7 @@ const mnemonic = fs.readFileSync(path.resolve(__dirname, '.secret')).toString().
 task("balance", "Prints an account's balance")
   .setAction(async () => {
     let accounts = await web3.eth.getAccounts();
-    console(accounts);
+    console.log(accounts);
   });
 
 // You have to export an object to set up your config
