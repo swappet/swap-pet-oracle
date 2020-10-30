@@ -4,7 +4,6 @@
 // When running the script with `hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
-const ethers = hre.ethers;
 
 // This is a script for deploying your contracts. You can adapt it to deploy
 // yours, or create new ones.
@@ -16,7 +15,12 @@ async function main() {
         "gets automatically created and destroyed every time. Use the Hardhat" +
         " option '--network localhost'"
     );
-  }
+  } 
+
+  // If this script is run directly using `node` you may want to call compile 
+  // manually to make sure everything is compiled 
+  await hre.run("compile");
+  const ethers = hre.ethers;
 
   // ethers is avaialble in the global scope
   const [deployer] = await ethers.getSigners();
