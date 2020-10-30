@@ -14,16 +14,20 @@ async function main() {
   // await bre.run('compile');
 
   // We get the contract to deploy
-  const SwapPetOracle = await bre.ethers.getContractFactory("SwapPetOracle");
+  const SwapPetOracle = await bre.ethers.getContract("SwapPetOracle");
+  // pass constructor arguments into deploy()
   const swapPetOracle = await SwapPetOracle.deploy("Hello, Buidler!");
+  console.log("SwapPetOracle deployed to:", swapPetOracle.address);
+  console.log("SwapPetOracle deploy hash:", contract.deployTransaction.hash);
 
+  // The contract is NOT deployed yet; we must wait until it is mined
   await swapPetOracle.deployed();
 
-  console.log("SwapPetOracle deployed to:", swapPetOracle.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
+// $ npx buidler run --network rinkeby scripts/deploy.js 
 main()
   .then(() => process.exit(0))
   .catch(error => {
