@@ -10,6 +10,8 @@ npm init
 npm install --save-dev hardhat
 npm install --save-dev @nomiclabs/hardhat-truffle5 @nomiclabs/hardhat-web3 web3
 vi hardhat.config.js
+npm install --save-dev ethers 
+npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 
 add gas-reporter:`$ npx npm install -D eth-gas-reporter`
 get gas report:`$ npx truffle test`

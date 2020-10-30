@@ -1,4 +1,4 @@
-const { ethers } = require("hardhat");
+// const { ethers } = require("hardhat");
 // This is a script for deploying your contracts. You can adapt it to deploy
 // yours, or create new ones.
 async function main() {
@@ -20,8 +20,8 @@ async function main() {
 
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  // const SampleToken = await ethers.getContractFactory("SampleToken");
-  const SampleToken = await ethers.getContract("SampleToken");
+  const SampleToken = await ethers.getContractFactory("SampleToken");
+  // const SampleToken = await ethers.getContract("SampleToken");
   const sToken = await SampleToken.deploy();
   await sToken.deployed();
 
