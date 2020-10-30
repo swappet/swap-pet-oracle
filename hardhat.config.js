@@ -9,6 +9,11 @@ const path = require('path');
 const infuraKey = fs.readFileSync(path.resolve(__dirname, '.infuraKey')).toString().trim(); 
 const mnemonic = fs.readFileSync(path.resolve(__dirname, '.secret')).toString().trim()
 
+// The next line is part of the sample project, you don't need it in your
+// project. It imports a Hardhat task definition, that can be used for
+// testing the frontend.
+// require("./tasks/faucet");
+
 // You have to export an object to set up your config
 // This object can have the following optional entries:
 // defaultNetwork, networks, solc, and paths.
