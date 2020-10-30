@@ -3,12 +3,7 @@
 //
 // When running the script with `buidler run <script>` you'll find the Buidler
 // Runtime Environment's members available in the global scope. 
-<<<<<<< HEAD
-import { ethers } from "@nomiclabs/buidler";
-=======
-const { ethers } = require("@nomiclabs/buidler")
-//import { ethers } from "@nomiclabs/buidler";
->>>>>>> c0e18d0a6ab42520f715670e19a9ce4174212129
+const { ethers } = require("hardhat");
 
 async function main() {
   // Buidler always runs the compile task when running scripts with its command
