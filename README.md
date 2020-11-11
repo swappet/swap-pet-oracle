@@ -1,5 +1,5 @@
-# swap.pet-oracle
-Price Oracle of Swap.Pet, support SwapPet/Uniswap/SushiSwap/ChainLink ...
+# swap-pet-oracle
+First ever fully on-chain Price Oracle Aggregator Protocol of Ethereum, support gas token(ACU.Fund Gas Token, AFGT), oracles and swappers (Uniswap/ChainLink/SushiSwap/SwapPet ...).
 
 # Summary
 Price Oracle of Swap.Pet include price refer and swap. 
@@ -7,6 +7,12 @@ Price Oracle of Swap.Pet include price refer and swap.
 the swapper is for swap the target base token to quote token at realtime.
 
 on Swap.Pet, default quote token is pUSDT(pegging USDT).
+
+# frame
+SwapPetOracle: record all token pair Price from diffrent platform(adapter)
+SwapPetOracleAdapter: base Price Oracle Adapter for platforms
+SwapPetOracleAdapterUniswap: detail Adapter of Price Oracle platform(Uniswap)
+IPriceOracle:interfase of detail token pair Price Oracle
 
 # Design Goals
 Goals of this new architecture are:

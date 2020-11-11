@@ -1,7 +1,7 @@
 {
-  "name": "swap-pet-price-oracle",
+  "name": "swap-pet-oracle",
   "version": "1.6.0",
-  "description": "Swap.Pet Price Oracle",
+  "description": "First ever fully on-chain Price Oracle Aggregator Protocol of Ethereum, support gas token(ACU.Fund Gas Token, AFGT), oracles and swappers (Uniswap/ChainLink/SushiSwap/SwapPet ...).",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/swappet/swap.pet-oracle.git"
+    "url": "git+https://github.com/swappet/swap-pet-oracle.git"
   },
   "keywords": [
     "Swap.Pet",
@@ -43,10 +43,10 @@
   "author": "swap.pet@pm.me",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/swappet/swap.pet-oracle/issues"
+    "url": "https://github.com/swappet/swap-pet-oracle/issues"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "homepage": "https://github.com/swappet/swap.pet-oracle#readme"
+  "homepage": "https://github.com/swappet/swap-pet-oracle#readme"
 }
